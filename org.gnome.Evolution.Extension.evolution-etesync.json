@@ -3,7 +3,7 @@
 	"runtime": "org.gnome.Evolution",
 	"branch": "stable",
 	"runtime-version": "stable",
-	"sdk": "org.gnome.Sdk//46",
+	"sdk": "org.gnome.Sdk//49",
         "sdk-extensions" : [
             "org.freedesktop.Sdk.Extension.rust-stable"
         ],
@@ -46,8 +46,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/etesync/libetebase/archive/v0.5.7.tar.gz",
-					"sha256": "ba5522d1d338f10fb31bf133f4fcd83d27d0c8fee7954c09dbed36dd97a07a88"
+					"url": "https://github.com/etesync/libetebase/archive/v0.5.8.tar.gz",
+					"sha256": "4f2623a6e194aa3df69307d13ad00c42ec853a1af02ca329e35cd829ff472145"
 				},
 				{
 					"type": "file",
@@ -68,8 +68,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://download.gnome.org/sources/evolution-etesync/1.1/evolution-etesync-1.1.1.tar.xz",
-					"sha256": "ae89773450caf25328825576bc9a675ce885e1c775481130c98f89e18555d3a3"
+					"url": "https://gitlab.gnome.org/GNOME/evolution-etesync/-/archive/1.1.2/evolution-etesync-1.1.2.tar.gz",
+					"sha256": "56f161e9e1c7faf0bf0a35c3b1e3edb2ff9d32e7a76866f021a4cf90b2923c98"
 				}
 			]
 		},
@@ -78,8 +78,7 @@
 			"name": "metainfo",
 			"buildsystem": "simple",
 			"build-commands": [
-				"install -t $FLATPAK_DEST/share/metainfo -Dm644 org.gnome.Evolution.Extension.evolution-etesync.metainfo.xml",
-				"appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}"
+				"install -t $FLATPAK_DEST/share/metainfo -Dm644 org.gnome.Evolution.Extension.evolution-etesync.metainfo.xml"
 
 			],
 			"sources": [
